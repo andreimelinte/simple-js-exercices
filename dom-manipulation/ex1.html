@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ex-1</title>
+  <style>
+    body { text-align: center; }
+    section { width: 300px; margin: 0 auto 60px; }
+    .input-group { width: 100%; }
+    button.btn { width: 100%; margin-top: 50px; }
+    label { text-align: left; margin-top: 20px; width: 100%; }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1>Register Form</h1>
+  <section>
+    <form>
+      <div class="input-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" value="John" name="first-name">
+      </div>
+      <div class="input-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" value="Oliver" name="last-name">
+      </div>
+      <div class="input-group">
+        <label>Age</label>
+        <input type="text" class="form-control" value="26" name="age">
+      </div>
+      <div class="input-group">
+        <label>Company</label>
+        <input type="text" class="form-control" value="Softvision" name="company">
+      </div>
+      <div class="input-group">
+        <button class="btn btn-default" disabled>Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <section>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Basic plan</div>
+        <div class="panel-body">
+          <h4>1 user</h4>
+          <div class="price">$<span class="value" per-year="50">5</span>/month</div>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">Advanced plan</div>
+        <div class="panel-body">
+          <h4>5 users</h4>
+          <div class="price">$<span class="value" perYear="180">20</span>/month</div>
+        </div>
+      </div>
+      <div class="panel panel-info">
+          <div class="panel-heading">Premium plan</div>
+          <div class="panel-body">
+            <h4>20 users</h4>
+            <div class="price">$<span class="value" perYear="300">35</span>/month</div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <script type="text/javascript">
+
+    var user = {};
+    var montlyPrices = [];
+    var yearlyPrices = [];
+    var myPlan = '';
+
+    // 1. Populate the user object to contain all details that we can gather about our user
+  
+
+
+    // 2. Grab all monthly prices from the blocks
+    // Hint: check push method on arrays
+    // Hint: check parseInt method
+
+
+
+    // 3. Grab all yearly prices from the blocks
+
+
+
+    // 4. Get the plan name which has the yearly subscription of $300
+
+
+    
+   // Enable the Submit button
+
+
+
+   //
+
+    console.log(user);
+    console.log(montlyPrices);
+    console.log(yearlyPrices);
+    console.log(myPlan);
+  </script>
+</body>
+
+</html>
