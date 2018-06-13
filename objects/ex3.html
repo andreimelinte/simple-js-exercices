@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ex-1</title>
+</head>
+
+<body>
+  <h1>Objects - ex 2</h1>
+
+  <script type="text/javascript">
+
+    // 1. Write a constructor function Book that generates an object containing book info
+    // It should contain:
+    // - book name
+    // - book year
+    // - book author
+    // - number of copies available
+
+    function Book() {
+
+    }
+
+    // 2. Write a constructor function Library that generates an object containing a library info
+    // It should contain: 
+    // books - a list of Books objects
+    // addBook(name, year, author, copies) - creates a new Book object based on parameters received
+    // findBook - finds a book based on name
+    // HINT: use string.findIndex to search in string
+    // HINT: look over string.toLowercase and think if you need that
+
+    function Library() {
+      function addBook() {
+
+      }
+
+      function findBook() {
+
+      }
+
+      return {
+        addBook: addBook,
+        findBook: findBook
+      };
+    }
+
+    console.log(new Book('My Book', 2018, 'Martin', 20)) // => a Book object containing the exact info
+    console.log(new Book('My Book 2', 2011, 'Doe', 20)) // => a Book object containing the exact info
+
+    var myLibrary = new Library();
+    myLibrary.addBook('My Book', 2018, 'Martin', 20);
+    myLibrary.addBook('Book of people', 2012, 'Doe', 12);
+    myLibrary.addBook('Book of Ely', 2012, 'Daniel', 12);
+    myLibrary.addBook('Javascript advanced', 2015, 'Doe', 12);
+    myLibrary.addBook('OOP', 2011, 'Doe', 12);
+
+    console.log(myLibrary.findBook('Book')) // => books 2 and 3 displayed
+    console.log(myLibrary.findBook('ely')) // => book 3 displayed
+
+  </script>
+</body>
+
+</html>

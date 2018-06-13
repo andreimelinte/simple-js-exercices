@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ex-1</title>
+</head>
+
+<body>
+  <h1>Objects - ex 2</h1>
+
+  <script type="text/javascript">
+
+    // 1. Write a function that when applied to myEmployee returns `firstName lastName, age age`
+
+    function shortInfo () {
+      
+    }
+
+    // 2. Populate the addEmployeeData method so that it enables adding new properties
+    // to myEmployee object. We will only have to limit the available properties to following:
+    // firstName, lastName, age, skills, city, country, experience, recommendations. If the user
+    // tries to add any other property, log a warning message in the console
+    // HINT: check array.find() 
+    // HINT: check console.warn()
+
+    function addEmployeeData (property, value) {
+
+    }
+
+    // 3. Populate the getSkills method so that it returns the skills under skillName category.
+    // If the skillName is not provided, 
+
+    function getSkills (skillName) {
+
+    }
+
+    (function () {
+      var myEmployee = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 24,
+        skills: {
+          programmer: ['JavaScript', 'CSS', 'HTML'],
+          design: ['Photoshop', 'Sketch'],
+          artistic: ['Dancing', 'Painging', 'Drawing'],
+          softSkills: ['Leadership', 'Mentoring']
+        },
+        addEmployeeData: addEmployeeData,
+        getSkills: getSkills
+      };
+
+      console.log(shortInfo.bind(myEmployee)(), 'Expected: John Doe, age 24') // => John Doe, age 24
+
+      myEmployee.addEmployeeData('city', 'Iasi');
+      console.log(myEmployee.city, 'Expected: Iasi');
+
+      myEmployee.addEmployeeData('experience', '4 years');
+      console.log(myEmployee.experience, 'Expected: 4 years');
+
+      myEmployee.addEmployeeData('hobbies', 'traveling, music'); // => a warning message should be thrown in the console
+      console.log(myEmployee.hobbies, 'Expected: undefined');
+    })();
+
+  </script>
+</body>
+
+</html>
