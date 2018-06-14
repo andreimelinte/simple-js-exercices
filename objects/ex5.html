@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // 1. Create a new class named VideoProduction. It will store some default details
+    // on video productions:
+    // duration: string
+    // title: string
+    // format: string (mp4, webm, avi etc.)
+    // type: string
+    // year: number
+    // changeFormat: function, updates format value
+    // getShortDescription - logs "title(duration)"
+
+
+
+
+    // 2. And create a third class, which also extends VideoProduction:
+    // Documentary => VideoProduction
+    // location: string
+
+
+
+
+    // 3. Then create another class that extend VideoProduction:
+    // Movie => VideoProduction
+    // actors: array
+    // director: string
+    // getShortDescription - logs "title - year"
+    // genre: string
+    // addActor: function, adds a new actor in the actors array
+
+
+
+
+    var movie = new Movie({
+      title: 'Logan',
+      year: 2017,
+      duration: '2h2min',
+      genre: 'Action',
+      director: 'James Mangold'
+    });
+    movie.addActor('Hugh Jackman');
+    movie.addActor('Dafne Keen');
+    movie.addActor('Patrick Stewart');
+    console.log(movie.getShortDescription()) // => Logan - 2017
+
+    var documentary = new Documentary ({
+      title: 'Before the Flood',
+      year: 2016,
+      duration: '1h30min',
+      location: 'worldwide'
+    });
+
+    console.log(documentary.getShortDescription()) // => Before the Flood(1h30min)
+
+  </script>
+</body>
+</html>
